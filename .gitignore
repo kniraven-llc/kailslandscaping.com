@@ -1,0 +1,102 @@
+# =============================================================================
+# Kail's Landscaping - PHP/MySQL Website
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Local/private configuration and secrets
+# -----------------------------------------------------------------------------
+/config/*.php
+!/config/*.example.php
+!/config/README.md
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+auth.json
+
+# -----------------------------------------------------------------------------
+# Runtime/storage/private files
+# -----------------------------------------------------------------------------
+/storage/*
+!/storage/.gitkeep
+
+*.log
+*.tmp
+*.temp
+/tmp/
+/cache/
+/logs/
+
+# -----------------------------------------------------------------------------
+# Public user/admin uploads
+# Keep upload folders in Git, but do not track uploaded files.
+# -----------------------------------------------------------------------------
+/public/assets/images/uploads/*
+!/public/assets/images/uploads/.gitkeep
+!/public/assets/images/uploads/services/
+
+/public/assets/images/uploads/services/*
+!/public/assets/images/uploads/services/.gitkeep
+
+# Temporary upload fragments, if any failed upload leaves one behind.
+/public/assets/images/uploads/**/.upload-*
+
+# -----------------------------------------------------------------------------
+# Dependencies
+# -----------------------------------------------------------------------------
+/vendor/
+/node_modules/
+
+composer.phar
+
+# Do NOT ignore composer.lock for an application project.
+# Do NOT ignore package-lock.json if Node tooling is later added.
+
+# -----------------------------------------------------------------------------
+# Local database files, exports, and dumps
+# -----------------------------------------------------------------------------
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+
+# -----------------------------------------------------------------------------
+# Backups and archives
+# -----------------------------------------------------------------------------
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+
+# -----------------------------------------------------------------------------
+# OS/editor junk
+# -----------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------------------------------------------------------------
+# Generated/local documentation
+# -----------------------------------------------------------------------------
+/directory-structure.txt

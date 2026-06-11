@@ -1,0 +1,778 @@
+/*
+    Kail's Landscaping structure styles.
+
+    This file controls page layout, spacing, sizing, and positioning.
+    Do not put colors, shadows, or visual theme styles in this file.
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.site-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.hero-content {
+    max-width: 46rem;
+}
+
+.hero-title {
+    max-width: 44rem;
+    font-size: clamp(2.4rem, 4.2vw, 4.25rem);
+    line-height: 1.12;
+}
+
+.hero-quick-contact {
+    max-width: 100%;
+}
+
+.hero-visual-card {
+    position: relative;
+    max-width: 30rem;
+    min-height: 20rem;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: visible;
+}
+
+.hero-selfie {
+    width: auto;
+    max-width: 100%;
+    max-height: 22rem;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.hero-logo-overlay {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    width: 44%;
+    max-width: 13rem;
+    min-width: 9rem;
+    z-index: 2;
+}
+
+.hero-logo-overlay-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navbar-logo {
+    width: auto;
+    height: 2.25rem;
+    display: block;
+}
+
+.form-wrapper {
+    max-width: 54rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.img-fluid-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.equal-height-card {
+    height: 100%;
+}
+
+/* Rich text content */
+
+.rich-text-block p:last-child {
+    margin-bottom: 0;
+}
+
+.rich-text-block ul,
+.rich-text-block ol {
+    margin-bottom: 0;
+}
+
+/* Service cards */
+
+.service-card {
+    overflow: hidden;
+}
+
+.service-card-image {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+    display: block;
+}
+
+/* Admin layout */
+
+.admin-layout {
+    display: grid;
+    grid-template-columns: 16rem minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.admin-sidebar {
+    position: sticky;
+    top: 1rem;
+}
+
+.admin-menu {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.admin-menu a {
+    display: block;
+    padding: 0.6rem 0.75rem;
+    text-decoration: none;
+}
+
+.admin-section {
+    scroll-margin-top: 1.5rem;
+}
+
+.admin-inner-panel {
+    padding: 1rem;
+}
+
+.admin-image-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 11rem;
+}
+
+.admin-image-preview img {
+    max-height: 11rem;
+    width: auto;
+    max-width: 100%;
+}
+
+.admin-help-icon {
+    vertical-align: middle;
+}
+
+.admin-help-text {
+    margin-top: 0.35rem;
+}
+
+.service-admin-card {
+    display: block;
+}
+
+.admin-top-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.admin-top-links-primary,
+.admin-top-links-account {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Admin rich text editor */
+
+.admin-rich-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.admin-rich-editable {
+    min-height: 8rem;
+    padding: 0.75rem;
+}
+
+.admin-rich-editable ul,
+.admin-rich-editable ol {
+    margin-bottom: 0;
+}
+
+.admin-rich-editable p:last-child {
+    margin-bottom: 0;
+}
+
+/* Requests / Jobs admin */
+
+.admin-request-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.admin-filter-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(14rem, 2fr) auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+.admin-filter-actions {
+    min-width: 10rem;
+}
+
+.request-card-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.request-summary-card {
+    display: block;
+}
+
+.request-summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.request-summary-status {
+    flex: 0 0 auto;
+}
+
+.request-summary-meta {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.request-summary-details {
+    margin-bottom: 1rem;
+}
+
+.request-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 6rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.request-item-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.request-item-card {
+    display: block;
+}
+
+/* Business card generator */
+
+.business-card-options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+.business-card-option-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.business-card-print-sheet {
+    display: grid;
+    grid-template-columns: repeat(2, 3.5in);
+    justify-content: center;
+    gap: 0.12in;
+}
+
+.print-business-card {
+    position: relative;
+    width: 3.5in;
+    height: 2in;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 0.95in;
+    gap: 0.08in;
+    padding: 0.11in;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.print-business-card:nth-child(10n) {
+    break-after: page;
+    page-break-after: always;
+}
+
+.business-card-bg-mark {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.business-card-left,
+.business-card-right {
+    position: relative;
+    z-index: 1;
+}
+
+.business-card-left {
+    min-width: 0;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: 0.05in;
+}
+
+.business-card-logo-wrap {
+    min-height: 0.28in;
+    display: flex;
+    align-items: center;
+}
+
+.business-card-logo {
+    max-width: 1.35in;
+    max-height: 0.35in;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.business-card-main-text h2 {
+    margin: 0;
+    font-size: 0.19in;
+    line-height: 1.05;
+}
+
+.business-card-main-text p,
+.business-card-contact p,
+.business-card-qr-wrap p {
+    margin: 0;
+}
+
+.business-card-tagline {
+    margin-top: 0.04in;
+    font-size: 0.075in;
+    line-height: 1.15;
+}
+
+.business-card-services {
+    margin-top: 0.05in;
+    font-size: 0.065in;
+    line-height: 1.2;
+}
+
+.business-card-contact {
+    display: grid;
+    gap: 0.018in;
+    font-size: 0.07in;
+    line-height: 1.2;
+}
+
+.business-card-right {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    align-items: end;
+    justify-items: center;
+    gap: 0.04in;
+}
+
+.business-card-person-wrap {
+    width: 0.86in;
+    height: 0.82in;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.business-card-person {
+    width: auto;
+    max-width: 0.86in;
+    max-height: 0.9in;
+    display: block;
+}
+
+.business-card-qr-wrap {
+    width: 0.68in;
+    display: grid;
+    justify-items: center;
+    gap: 0.015in;
+}
+
+.business-card-qr {
+    width: 0.62in;
+    height: 0.62in;
+    display: block;
+}
+
+.business-card-qr-wrap p {
+    font-size: 0.052in;
+    line-height: 1.05;
+    text-align: center;
+}
+
+/* Printable receipt */
+
+.receipt-print-page .container {
+    max-width: 960px;
+}
+
+.print-receipt {
+    max-width: 8in;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0.35in;
+}
+
+.print-receipt-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2.8in;
+    gap: 0.35in;
+    align-items: start;
+    margin-bottom: 0.35in;
+}
+
+.print-receipt-logo {
+    max-width: 2.1in;
+    max-height: 0.75in;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-bottom: 0.15in;
+}
+
+.print-receipt-business h2,
+.print-receipt-title-block h1,
+.print-receipt-bill-to h2,
+.print-receipt-notes h2 {
+    margin-top: 0;
+}
+
+.print-receipt-small-lines p {
+    margin: 0 0 0.04in;
+}
+
+.print-receipt-title-block {
+    text-align: right;
+}
+
+.print-receipt-title-block dl,
+.print-receipt-totals dl {
+    margin: 0;
+}
+
+.print-receipt-title-block dl div,
+.print-receipt-totals dl div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.15in;
+    margin-bottom: 0.06in;
+}
+
+.print-receipt-title-block dt,
+.print-receipt-title-block dd,
+.print-receipt-totals dt,
+.print-receipt-totals dd {
+    margin: 0;
+}
+
+.print-receipt-bill-to {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.35in;
+    margin-bottom: 0.35in;
+}
+
+.print-receipt-bill-to p {
+    margin: 0 0 0.05in;
+}
+
+.print-receipt-client-name {
+    font-weight: 700;
+}
+
+.print-receipt-items {
+    margin-bottom: 0.35in;
+}
+
+.print-receipt-items table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.print-receipt-items th,
+.print-receipt-items td {
+    padding: 0.08in;
+    vertical-align: top;
+}
+
+.print-receipt-lower {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 2.8in;
+    gap: 0.35in;
+    align-items: start;
+}
+
+.print-receipt-notes p {
+    margin-top: 0;
+}
+
+.print-receipt-totals {
+    width: 100%;
+}
+
+.print-receipt-total-row,
+.print-receipt-balance-row {
+    font-weight: 700;
+}
+
+.print-receipt-footer-note {
+    margin-top: 0.35in;
+    padding-top: 0.15in;
+}
+
+/* Print helpers */
+
+.print-hide {
+    display: block;
+}
+
+@media (max-width: 1199.98px) {
+    .hero-title {
+        font-size: clamp(2.25rem, 4vw, 3.7rem);
+    }
+
+    .admin-filter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .request-summary-meta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .business-card-options-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-visual-card {
+        max-width: 27rem;
+        min-height: 18rem;
+    }
+
+    .hero-selfie {
+        max-height: 20rem;
+    }
+
+    .hero-logo-overlay {
+        width: 42%;
+        min-width: 8rem;
+    }
+
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar {
+        position: static;
+    }
+
+    .admin-top-links {
+        display: grid;
+    }
+
+    .print-receipt-header,
+    .print-receipt-bill-to,
+    .print-receipt-lower {
+        grid-template-columns: 1fr;
+    }
+
+    .print-receipt-title-block {
+        text-align: left;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .site-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-section {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .navbar-logo {
+        height: 2rem;
+    }
+
+    .hero-visual-card {
+        max-width: 23rem;
+        min-height: 16rem;
+    }
+
+    .hero-selfie {
+        max-height: 18rem;
+    }
+
+    .hero-logo-overlay {
+        right: 0.5rem;
+        bottom: 0.5rem;
+        width: 44%;
+        min-width: 7.25rem;
+    }
+
+    .service-card-image {
+        height: 11rem;
+    }
+
+    .admin-filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .request-summary-header {
+        display: grid;
+    }
+
+    .request-summary-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .request-status {
+        width: 100%;
+    }
+
+    .business-card-options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .business-card-print-sheet {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media print {
+    @page {
+        size: letter;
+        margin: 0.25in;
+    }
+
+    html,
+    body {
+        min-height: auto;
+        display: block;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .navbar,
+    body > footer,
+    .print-hide,
+    .admin-top-links {
+        display: none !important;
+    }
+
+    .site-section {
+        padding: 0;
+    }
+
+    .business-card-generator .container,
+    .receipt-print-page .container {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .business-card-print-sheet {
+        width: 7.12in;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 3.5in);
+        gap: 0.12in;
+    }
+
+    .print-business-card {
+        width: 3.5in;
+        height: 2in;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .print-business-card:nth-child(10n) {
+        break-after: page;
+        page-break-after: always;
+    }
+
+    .print-receipt {
+        width: 7.5in;
+        max-width: none;
+        margin: 0 auto;
+        padding: 0.2in;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .print-receipt-header {
+        grid-template-columns: minmax(0, 1fr) 2.6in;
+    }
+
+    .print-receipt-title-block {
+        text-align: right;
+    }
+
+    .print-receipt-bill-to {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .print-receipt-lower {
+        grid-template-columns: minmax(0, 1fr) 2.6in;
+    }
+}

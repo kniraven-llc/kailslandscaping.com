@@ -1,0 +1,811 @@
+/*
+    Kail's Landscaping theme styles.
+
+    This file controls colors, fonts, borders, shadows, and visual style.
+    Do not put layout, spacing, sizing, or positioning rules in this file.
+*/
+
+:root {
+    --kails-yellow: #F2CC16;
+    --kails-green: #97B62A;
+    --kails-dark-green: #365123;
+    --kails-black: #060707;
+    --kails-white: #F0F2ED;
+
+    --kails-charcoal: #0d0f0d;
+    --kails-panel: #11150f;
+    --kails-panel-light: #171f13;
+
+    --kails-text-soft: rgba(240, 242, 237, 0.9);
+    --kails-text-muted: rgba(240, 242, 237, 0.7);
+
+    --kails-border-soft: rgba(240, 242, 237, 0.14);
+    --kails-border-green: rgba(151, 182, 42, 0.45);
+    --kails-border-yellow: rgba(242, 204, 22, 0.8);
+
+    --kails-shadow-soft: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.35);
+    --kails-shadow-strong: 0 1rem 2.5rem rgba(0, 0, 0, 0.65);
+}
+
+/* Base theme */
+
+body {
+    background-color: var(--kails-black);
+    color: var(--kails-white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--kails-white);
+}
+
+p,
+li {
+    color: var(--kails-text-soft);
+}
+
+a {
+    color: var(--kails-yellow);
+}
+
+a:hover,
+a:focus {
+    color: var(--kails-green);
+}
+
+.text-muted {
+    color: var(--kails-text-muted) !important;
+}
+
+/* Bootstrap background overrides */
+
+.bg-success {
+    background-color: var(--kails-dark-green) !important;
+}
+
+.bg-light {
+    background-color: var(--kails-panel) !important;
+    color: var(--kails-white);
+}
+
+.bg-white {
+    background-color: var(--kails-panel) !important;
+    color: var(--kails-white) !important;
+}
+
+/* Navigation */
+
+.navbar {
+    background-color: var(--kails-black) !important;
+    border-bottom: 3px solid var(--kails-yellow);
+    box-shadow: var(--kails-shadow-soft);
+}
+
+.navbar-brand {
+    color: var(--kails-white) !important;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.navbar-brand span {
+    color: var(--kails-white);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--kails-text-soft);
+    font-weight: 700;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: var(--kails-yellow);
+}
+
+/* Hero */
+
+.hero-section {
+    background:
+        radial-gradient(circle at 76% 35%, rgba(151, 182, 42, 0.30), transparent 23%),
+        radial-gradient(circle at 18% 26%, rgba(242, 204, 22, 0.10), transparent 17%),
+        linear-gradient(110deg, #060707 0%, #090b09 42%, #1f2f17 100%) !important;
+    border-bottom: 4px solid var(--kails-yellow);
+}
+
+.hero-section h1 {
+    color: var(--kails-white);
+    text-shadow: 0 0.25rem 0.65rem rgba(0, 0, 0, 0.85);
+}
+
+.hero-section .lead {
+    color: var(--kails-text-soft);
+}
+
+.hero-quick-contact {
+    background-color: rgba(6, 7, 7, 0.92);
+    border: 1px solid var(--kails-border-green);
+    border-left: 0.35rem solid var(--kails-yellow);
+    border-radius: 1rem;
+    box-shadow: var(--kails-shadow-strong);
+}
+
+.hero-quick-contact h2 {
+    color: var(--kails-yellow);
+}
+
+.hero-visual-card {
+    background:
+        radial-gradient(circle at center, rgba(151, 182, 42, 0.2), transparent 58%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+        rgba(6, 7, 7, 0.68);
+    border: 1px solid var(--kails-border-green);
+    border-radius: 1rem;
+    box-shadow: var(--kails-shadow-strong);
+}
+
+.hero-selfie {
+    filter:
+        drop-shadow(0 1.2rem 1.4rem rgba(0, 0, 0, 0.88))
+        drop-shadow(0 0 1.15rem rgba(151, 182, 42, 0.20));
+}
+
+.hero-logo-overlay {
+    background-color: rgba(6, 7, 7, 0.94);
+    border: 1px solid var(--kails-border-yellow);
+    border-radius: 0.75rem;
+    box-shadow: var(--kails-shadow-soft);
+    padding: 0.5rem 0.75rem;
+}
+
+.hero-logo-overlay-image {
+    filter: drop-shadow(0 0.65rem 1rem rgba(0, 0, 0, 0.65));
+}
+
+/* Buttons */
+
+.btn-success {
+    background-color: var(--kails-dark-green);
+    border-color: var(--kails-green);
+    color: var(--kails-white);
+    font-weight: 700;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: var(--kails-green);
+    border-color: var(--kails-green);
+    color: var(--kails-black);
+}
+
+.btn-light {
+    background-color: var(--kails-yellow);
+    border-color: var(--kails-yellow);
+    color: var(--kails-black);
+    font-weight: 800;
+    box-shadow: 0 0.35rem 0 rgba(148, 119, 0, 0.95);
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    background-color: var(--kails-white);
+    border-color: var(--kails-white);
+    color: var(--kails-black);
+}
+
+.btn-outline-light {
+    background-color: rgba(6, 7, 7, 0.35);
+    border-color: var(--kails-yellow);
+    color: var(--kails-yellow);
+    font-weight: 800;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+    background-color: var(--kails-yellow);
+    border-color: var(--kails-yellow);
+    color: var(--kails-black);
+}
+
+.btn-danger {
+    font-weight: 800;
+}
+
+/* Cards and panels */
+
+.card {
+    background-color: var(--kails-panel);
+    color: var(--kails-white);
+    border-color: var(--kails-border-green);
+    box-shadow: var(--kails-shadow-soft);
+}
+
+.card:hover {
+    border-color: var(--kails-border-yellow);
+}
+
+.card-title {
+    color: var(--kails-yellow);
+}
+
+.card-text {
+    color: var(--kails-text-soft);
+}
+
+.border {
+    border-color: var(--kails-border-soft) !important;
+}
+
+/* Alerts */
+
+.alert-success {
+    background-color: rgba(151, 182, 42, 0.16);
+    border-color: var(--kails-border-green);
+    color: var(--kails-white);
+}
+
+.alert-danger {
+    background-color: rgba(180, 35, 24, 0.18);
+    border-color: rgba(255, 130, 120, 0.5);
+    color: var(--kails-white);
+}
+
+.alert-warning {
+    background-color: rgba(242, 204, 22, 0.14);
+    border-color: var(--kails-border-yellow);
+    color: var(--kails-white);
+}
+
+/* Rich text content */
+
+.rich-text-block {
+    color: var(--kails-text-soft);
+}
+
+.rich-text-block a {
+    color: var(--kails-yellow);
+    font-weight: 700;
+}
+
+.rich-text-block a:hover,
+.rich-text-block a:focus {
+    color: var(--kails-green);
+}
+
+.rich-text-block strong {
+    color: var(--kails-white);
+}
+
+.rich-text-block ul,
+.rich-text-block ol {
+    color: var(--kails-text-soft);
+}
+
+.rich-text-block li::marker {
+    color: var(--kails-yellow);
+}
+
+/* Service cards */
+
+.service-card-image {
+    border-bottom: 1px solid var(--kails-border-green);
+}
+
+/* Sections */
+
+#services {
+    background:
+        linear-gradient(180deg, var(--kails-black) 0%, var(--kails-charcoal) 100%);
+}
+
+#about {
+    background:
+        linear-gradient(135deg, var(--kails-panel) 0%, var(--kails-panel-light) 100%) !important;
+    border-top: 1px solid var(--kails-border-soft);
+    border-bottom: 1px solid var(--kails-border-soft);
+}
+
+#contact {
+    background-color: var(--kails-black);
+}
+
+/* Forms */
+
+.form-label {
+    color: var(--kails-white);
+    font-weight: 700;
+}
+
+.form-control {
+    background-color: var(--kails-charcoal);
+    border-color: var(--kails-border-green);
+    color: var(--kails-white);
+}
+
+.form-control:focus {
+    background-color: var(--kails-charcoal);
+    border-color: var(--kails-yellow);
+    color: var(--kails-white);
+    box-shadow: 0 0 0 0.25rem rgba(242, 204, 22, 0.2);
+}
+
+.form-control::placeholder {
+    color: rgba(240, 242, 237, 0.45);
+}
+
+.form-select,
+select.form-control {
+    background-color: var(--kails-charcoal);
+    border-color: var(--kails-border-green);
+    color: var(--kails-white);
+}
+
+.form-check-input:checked {
+    background-color: var(--kails-green);
+    border-color: var(--kails-green);
+}
+
+.form-text {
+    color: var(--kails-text-muted);
+}
+
+/* Admin */
+
+.admin-sidebar-card,
+.admin-inner-panel {
+    background-color: rgba(6, 7, 7, 0.55);
+    border: 1px solid var(--kails-border-green);
+    border-radius: 1rem;
+    box-shadow: var(--kails-shadow-soft);
+}
+
+.admin-sidebar-card {
+    padding: 1rem;
+}
+
+.admin-menu a {
+    color: var(--kails-text-soft);
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+}
+
+.admin-menu a:hover,
+.admin-menu a:focus {
+    color: var(--kails-black);
+    background-color: var(--kails-yellow);
+    border-color: var(--kails-yellow);
+}
+
+.admin-section {
+    border-color: var(--kails-border-green);
+}
+
+.admin-help-icon {
+    color: var(--kails-black) !important;
+    cursor: help;
+}
+
+.admin-help-text {
+    color: var(--kails-text-muted);
+    font-size: 0.9rem;
+}
+
+.admin-image-preview {
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--kails-border-soft);
+    border-radius: 0.75rem;
+}
+
+.service-admin-card {
+    border-color: var(--kails-border-green);
+}
+
+.admin-user-pill {
+    background-color: rgba(6, 7, 7, 0.55);
+    border: 1px solid var(--kails-border-green);
+    border-radius: 999px;
+    color: var(--kails-text-soft);
+    padding: 0.55rem 0.85rem;
+}
+
+.admin-user-pill strong {
+    color: var(--kails-yellow);
+}
+
+/* Admin rich text editor */
+
+.admin-rich-toolbar .btn {
+    border-color: var(--kails-border-green);
+}
+
+.admin-rich-toolbar .btn:hover,
+.admin-rich-toolbar .btn:focus {
+    background-color: var(--kails-yellow);
+    border-color: var(--kails-yellow);
+    color: var(--kails-black);
+}
+
+.admin-rich-editable {
+    background-color: var(--kails-charcoal);
+    color: var(--kails-white);
+    border: 1px solid var(--kails-border-green);
+    border-radius: 0.5rem;
+}
+
+.admin-rich-editable:focus {
+    outline: none;
+    border-color: var(--kails-yellow);
+    box-shadow: 0 0 0 0.25rem rgba(242, 204, 22, 0.2);
+}
+
+.admin-rich-editable a {
+    color: var(--kails-yellow);
+    font-weight: 700;
+}
+
+.admin-rich-editable a:hover,
+.admin-rich-editable a:focus {
+    color: var(--kails-green);
+}
+
+.admin-rich-editable strong {
+    color: var(--kails-white);
+}
+
+.admin-rich-editable li::marker {
+    color: var(--kails-yellow);
+}
+
+/* Requests / Jobs admin */
+
+.request-summary-card {
+    border-color: var(--kails-border-green);
+}
+
+.request-summary-card:hover {
+    border-color: var(--kails-border-yellow);
+}
+
+.request-summary-meta {
+    color: var(--kails-text-muted);
+}
+
+.request-summary-meta strong {
+    color: var(--kails-white);
+}
+
+.request-summary-details {
+    color: var(--kails-text-soft);
+}
+
+.request-item-card {
+    border-color: var(--kails-border-green);
+}
+
+.request-status {
+    color: var(--kails-black);
+    background-color: var(--kails-yellow);
+    border: 1px solid var(--kails-yellow);
+    border-radius: 999px;
+}
+
+.request-status-new,
+.request-status-draft {
+    background-color: var(--kails-yellow);
+    border-color: var(--kails-yellow);
+    color: var(--kails-black);
+}
+
+.request-status-contacted,
+.request-status-ready-to-print,
+.request-status-sent {
+    background-color: #cfe7ff;
+    border-color: #cfe7ff;
+    color: #06111f;
+}
+
+.request-status-needs-estimate {
+    background-color: #ffe2a8;
+    border-color: #ffe2a8;
+    color: #1d1200;
+}
+
+.request-status-estimate-scheduled,
+.request-status-printed {
+    background-color: #d8c7ff;
+    border-color: #d8c7ff;
+    color: #140c2c;
+}
+
+.request-status-quoted {
+    background-color: #bdf3ff;
+    border-color: #bdf3ff;
+    color: #00181f;
+}
+
+.request-status-accepted,
+.request-status-paid {
+    background-color: var(--kails-green);
+    border-color: var(--kails-green);
+    color: var(--kails-black);
+}
+
+.request-status-scheduled {
+    background-color: #d9f99d;
+    border-color: #d9f99d;
+    color: #142000;
+}
+
+.request-status-in-progress,
+.request-status-partially-paid {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: var(--kails-black);
+}
+
+.request-status-completed {
+    background-color: #86efac;
+    border-color: #86efac;
+    color: #001a08;
+}
+
+.request-status-cancelled,
+.request-status-void {
+    background-color: #fca5a5;
+    border-color: #fca5a5;
+    color: #260000;
+}
+
+.request-status-archived {
+    background-color: #9ca3af;
+    border-color: #9ca3af;
+    color: #050505;
+}
+
+/* Business card generator */
+
+.print-business-card {
+    background:
+        radial-gradient(circle at 92% 15%, rgba(151, 182, 42, 0.35), transparent 36%),
+        linear-gradient(135deg, #060707 0%, #11150f 48%, #263b1a 100%);
+    border: 1px dashed rgba(0, 0, 0, 0.35);
+    color: var(--kails-white);
+}
+
+.business-card-bg-mark {
+    background:
+        linear-gradient(90deg, rgba(242, 204, 22, 0.9), rgba(242, 204, 22, 0)) left bottom / 100% 0.04in no-repeat;
+    opacity: 0.95;
+}
+
+.business-card-main-text h2 {
+    color: var(--kails-white);
+    text-shadow: 0 0.035in 0.06in rgba(0, 0, 0, 0.75);
+}
+
+.business-card-tagline {
+    color: var(--kails-yellow);
+    font-weight: 700;
+}
+
+.business-card-services {
+    color: var(--kails-text-soft);
+}
+
+.business-card-contact {
+    color: var(--kails-white);
+}
+
+.business-card-contact p {
+    color: var(--kails-white);
+}
+
+.business-card-contact strong {
+    color: var(--kails-yellow);
+}
+
+.business-card-logo {
+    filter: drop-shadow(0 0.04in 0.06in rgba(0, 0, 0, 0.75));
+}
+
+.business-card-person {
+    filter: drop-shadow(0 0.06in 0.08in rgba(0, 0, 0, 0.85));
+}
+
+.business-card-qr-wrap {
+    background-color: rgba(240, 242, 237, 0.95);
+    border: 1px solid rgba(242, 204, 22, 0.9);
+    border-radius: 0.06in;
+    padding: 0.035in;
+}
+
+.business-card-qr-wrap p {
+    color: var(--kails-black);
+    font-weight: 700;
+}
+
+/* Printable receipt */
+
+.print-receipt {
+    background-color: #ffffff;
+    color: #111111;
+    border: 1px solid #d7d7d7;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.35);
+}
+
+.print-receipt h1,
+.print-receipt h2,
+.print-receipt h3,
+.print-receipt p,
+.print-receipt li,
+.print-receipt dt,
+.print-receipt dd,
+.print-receipt td,
+.print-receipt th {
+    color: #111111;
+}
+
+.print-receipt-title-block h1 {
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.print-receipt-small-lines p {
+    color: #333333;
+}
+
+.print-receipt-title-block dl div,
+.print-receipt-totals dl div {
+    border-bottom: 1px solid #dddddd;
+}
+
+.print-receipt-title-block dt,
+.print-receipt-totals dt {
+    color: #333333;
+    font-weight: 700;
+}
+
+.print-receipt-title-block dd,
+.print-receipt-totals dd {
+    color: #111111;
+    text-align: right;
+}
+
+.print-receipt-bill-to {
+    border-top: 2px solid #111111;
+    border-bottom: 2px solid #111111;
+    padding-top: 0.18in;
+    padding-bottom: 0.18in;
+}
+
+.print-receipt-bill-to h2,
+.print-receipt-notes h2 {
+    color: #111111;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.print-receipt-client-name {
+    color: #111111;
+}
+
+.print-receipt-items table {
+    border: 1px solid #111111;
+}
+
+.print-receipt-items th {
+    background-color: #111111;
+    color: #ffffff;
+    border: 1px solid #111111;
+}
+
+.print-receipt-items td {
+    border: 1px solid #d7d7d7;
+}
+
+.print-receipt-total-row,
+.print-receipt-balance-row {
+    border-top: 2px solid #111111;
+}
+
+.print-receipt-total-row dt,
+.print-receipt-total-row dd,
+.print-receipt-balance-row dt,
+.print-receipt-balance-row dd {
+    color: #111111;
+}
+
+.print-receipt-footer-note {
+    border-top: 1px solid #d7d7d7;
+}
+
+.print-receipt .rich-text-block,
+.print-receipt .rich-text-block p,
+.print-receipt .rich-text-block li,
+.print-receipt .rich-text-block strong {
+    color: #111111;
+}
+
+.print-receipt .rich-text-block a {
+    color: #111111;
+    text-decoration: underline;
+}
+
+/* Code */
+
+code {
+    color: var(--kails-yellow);
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--kails-black) !important;
+    border-top: 3px solid var(--kails-yellow);
+}
+
+/* Brand utility classes */
+
+.kails-text-yellow {
+    color: var(--kails-yellow) !important;
+}
+
+.kails-text-green {
+    color: var(--kails-green) !important;
+}
+
+.kails-text-dark-green {
+    color: var(--kails-dark-green) !important;
+}
+
+.kails-bg-black {
+    background-color: var(--kails-black) !important;
+}
+
+.kails-bg-dark-green {
+    background-color: var(--kails-dark-green) !important;
+}
+
+.kails-bg-green {
+    background-color: var(--kails-green) !important;
+}
+
+.kails-bg-yellow {
+    background-color: var(--kails-yellow) !important;
+    color: var(--kails-black) !important;
+}
+
+@media print {
+    body {
+        background-color: #ffffff !important;
+        color: #111111 !important;
+    }
+
+    .print-business-card {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background:
+            radial-gradient(circle at 92% 15%, rgba(151, 182, 42, 0.35), transparent 36%),
+            linear-gradient(135deg, #060707 0%, #11150f 48%, #263b1a 100%) !important;
+        border: 1px dashed #888888;
+        box-shadow: none;
+    }
+
+    .business-card-bg-mark,
+    .business-card-qr-wrap,
+    .print-receipt,
+    .print-receipt-items th {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .print-receipt {
+        box-shadow: none;
+        border: none;
+    }
+}
